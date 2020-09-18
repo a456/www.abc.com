@@ -1,0 +1,14 @@
+【错误SQL】
+SELECT id as value,name,id FROM oa_client WHERE `status`=1 and ((`uid`='1') or (`id`=0) or (instr(concat(',', shateid, ','), ',1,')>0)) ORDER BY `name`
+
+【原因】
+Unknown column 'status' in 'where clause'
+
+【URL】
+http://www.abc.com/index.php?a=getselectdata&m=mode_project_contract|input&d=flow&act=selectcust&acttyle=act&sysmodenum=project_contract&ajaxbool=true&rnd=58377
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36

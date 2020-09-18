@@ -1,0 +1,30 @@
+【错误SQL】
+select * from oa_project_contract where 1=1    and uid='1'      order by `optdt` desc    limit 0,15
+
+【原因】
+Unknown column 'optdt' in 'order clause'
+
+【URL】
+http://www.abc.com/index.php?a=publicstore&m=mode_project_contract|input&d=flow&modeid=76&ajaxbool=true&rnd=352011&pnum=
+
+【POST】
+[tablename_abc]：ff0it0iu0xxo0fi0xbf0og0xbg0xbb0ib0mi0xbg0fo0mb0ma0uo0ff0xbf0ib0xbg0xbb0gm0mo0mo08
+[defaultorder]：
+[keywhere]：
+[where]：
+[sort]：
+[dir]：
+[loadci]：1
+[storebeforeaction]：storebeforeshow
+[storeafteraction]：storeaftershow
+[modenum]：project_contract
+[start]：0
+[page]：1
+[limit]：15
+[atype]：my
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36

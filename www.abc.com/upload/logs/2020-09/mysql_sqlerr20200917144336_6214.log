@@ -1,0 +1,14 @@
+【错误SQL】
+select * from oa_ where 1=1        limit 0,15
+
+【原因】
+Table 'oa.oa_' doesn't exist
+
+【URL】
+http://www.abc.com/index.php?a=publicstore&m=flow&d=main&ajaxbool=true&rnd=360177
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36

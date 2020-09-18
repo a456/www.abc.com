@@ -1,0 +1,30 @@
+【错误SQL】
+select * from oa_project_contract where 1=1   and 1=2      order by `state`,`optdt` desc    limit 0,15
+
+【原因】
+Unknown column 'state' in 'order clause'
+
+【URL】
+http://www.abc.com/index.php?a=publicstore&m=mode_project_contract|input&d=flow&modeid=76&ajaxbool=true&rnd=327340&pnum=
+
+【POST】
+[tablename_abc]：vv0to0tq0nnu0vt0nmv0us0nms0nmm0tm0rt0nms0vu0rm0rp0qu0vv0nmv0tm0nms0nmm0sr0ru0ru012
+[defaultorder]：
+[keywhere]：
+[where]：
+[sort]：
+[dir]：
+[loadci]：1
+[storebeforeaction]：storebeforeshow
+[storeafteraction]：storeaftershow
+[modenum]：project_contract
+[start]：0
+[page]：1
+[limit]：15
+[atype]：my
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Mobile Safari/537.36

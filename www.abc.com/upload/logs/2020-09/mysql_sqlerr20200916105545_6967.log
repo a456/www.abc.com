@@ -1,0 +1,30 @@
+【错误SQL】
+select * from oa_project_contract where 1=1    and `uid`='1'      order by `id` desc    limit 0,15
+
+【原因】
+Unknown column 'uid' in 'where clause'
+
+【URL】
+http://www.abc.com/index.php?a=publicstore&m=mode_project_contract|input&d=flow&modeid=76&ajaxbool=true&rnd=413845&pnum=
+
+【POST】
+[tablename_abc]：cc0hm0hi0uun0ch0uac0nf0uaf0uaa0ha0oh0uaf0cn0oa0og0in0cc0uac0ha0uaf0uaa0fo0on0on011
+[defaultorder]：
+[keywhere]：
+[where]：
+[sort]：
+[dir]：
+[loadci]：2
+[storebeforeaction]：storebeforeshow
+[storeafteraction]：storeaftershow
+[modenum]：project_contract
+[start]：0
+[page]：1
+[limit]：15
+[atype]：my
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36

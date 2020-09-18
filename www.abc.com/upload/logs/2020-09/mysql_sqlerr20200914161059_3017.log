@@ -1,0 +1,30 @@
+【错误SQL】
+select * from oa_custract where 1=1    and `uid`='1'      order by `optdt` desc    limit 0,15
+
+【原因】
+Unknown column 'uid' in 'where clause'
+
+【URL】
+http://www.abc.com/index.php?a=publicstore&m=mode_custract|input&d=flow&modeid=35&ajaxbool=true&rnd=729196&pnum=
+
+【POST】
+[tablename_abc]：cw0fm0ch0mgg0muu0ng0no0muo0cw0fm0cm0fc012
+[defaultorder]：
+[keywhere]：
+[where]：
+[sort]：
+[dir]：
+[loadci]：1
+[storebeforeaction]：storebeforeshow
+[storeafteraction]：storeaftershow
+[modenum]：custract
+[start]：0
+[page]：1
+[limit]：15
+[atype]：my
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36

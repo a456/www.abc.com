@@ -1,0 +1,14 @@
+【错误SQL】
+SELECT `id`,`num`,`url`,`icons`,`name`,`pid` FROM oa_menu WHERE `status`=1  and `id` in() order by `sort`,`id`
+
+【原因】
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by `sort`,`id`' at line 1
+
+【URL】
+http://www.abc.com/index.php?a=getmenu&m=index&d=&ajaxbool=true&rnd=763665&pid=255
+
+【IP】
+127.0.0.1
+
+【浏览器】
+Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Mobile Safari/537.36
