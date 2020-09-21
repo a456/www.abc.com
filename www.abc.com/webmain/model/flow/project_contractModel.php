@@ -28,9 +28,9 @@ class flow_project_contractClassModel extends flowModel
             $service_type = explode(',',$rs['service_type']);
             $for_service_type = '';
             for($index=0;$index<count($service_type);$index++){
-                $for_service_type .= $this->service_type[$service_type[$index]].'|';
+                $for_service_type .= $this->service_type[$service_type[$index]].',';
             }
-            $rs['service_type'] = $for_service_type;
+            $rs['service_type'] = rtrim($for_service_type,',');
         }
         if(isset($this->is_record[$rs['is_record']])){
             $rs['is_record'] = $this->is_record[$rs['is_record']];
