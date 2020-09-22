@@ -47,4 +47,47 @@ class flow_project_contractClassModel extends flowModel
         return $rs;
     }
 
+    //导入之前
+    public function flowdaorubefore($rows)
+    {
+        foreach($rows as $k=>$rs){
+            $custname = trim($rows[$k]['custname']);
+            $name = m('client')->getone("name='$custname'", 'id');
+            if (isset($name['id'])) {
+                $name = $name['id'];
+            }
+            $is_frame_flip = array_flip($this->is_frame);
+            if (isset($is_frame_flip[$rows[$k]['is_frame']])){
+                $rows[$k]['is_frame'] = $is_frame_flip[$rows[$k]['is_frame']];
+            }
+            $business_stype_flip = array_flip($this->business_stype);
+            if (isset($business_stype_flip[$rows[$k]['business_type']])){
+                $rows[$k]['business_type'] = $business_stype_flip[$rows[$k]['business_type']];
+            }
+            $engineering_type_flip = array_flip($this->engineering_type);
+            if (isset($engineering_type_flip[$rows[$k]['engineering_type']])){
+                $rows[$k]['engineering_type'] = $engineering_type_flip[$rows[$k]['engineering_type']];
+            }
+            if(isset($rows[$k]['service_type'])){
+                $service_type_flip = array_flip($this->service_type);
+                $service_type_type = explode(',',$rows[$k]['service_type']);
+                $for_service_type = '';
+                for($index=0;$index<count($service_type_type);$index++){
+                    if (isset($service_type_flip[$service_type_type[$index]])){
+                        $for_service_type .= $service_type_flip[$service_type_type[$index]].',';
+                    }
+                }
+                $for_service_type = rtrim($for_service_type,',');
+            }
+
+            $rows[$k]['service_type'] = $for_service_type;
+            $rows[$k]['custid'] = $name;
+            $rows[$k]['update_id'] = $this->adminid;
+            $rows[$k]['uid'] = $this->adminid;
+            $rows[$k]['create_name'] = $this->adminname;
+            $rows[$k]['update_name'] = $this->adminname;
+        }
+
+        return $rows;
+    }
 }
