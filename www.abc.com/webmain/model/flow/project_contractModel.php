@@ -51,6 +51,7 @@ class flow_project_contractClassModel extends flowModel
     public function flowdaorubefore($rows)
     {
         foreach($rows as $k=>$rs){
+            $rows[$k]['num'] = 'GC-'.$this->findNum($rows[$k]['num']);
             $custname = trim($rows[$k]['custname']);
             $name = m('client')->getone("name='$custname'", 'id');
             if (isset($name['id'])) {
@@ -89,5 +90,19 @@ class flow_project_contractClassModel extends flowModel
         }
 
         return $rows;
+    }
+    public function findNum($str=''){
+        $str=trim($str);
+        if(empty($str)){
+            return '';
+        }
+        $temp=array('1','2','3','4','5','6','7','8','9','0');
+        $result='';
+        for($i=0;$i<strlen($str);$i++){
+            if(in_array($str[$i],$temp)){
+                $result.=$str[$i];
+            }
+        }
+        return $result;
     }
 }
